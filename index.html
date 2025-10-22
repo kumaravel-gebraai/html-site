@@ -1,476 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/B Test Platform - Optimize Your Conversions</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Everloop SDK Loader --> 
-    <link
-        id="everloop-sdk-preload"
-        rel="preload"
-        href="https://cdn-prod.geteverloop.com/everloop.min.js?project_id=YEf4fbz3phYn6vzc"
-        as="script"
-    />
-    <script id="everloop-sdk-loader">
-        (function (w, d, s, p) {
-        var st = d.createElement(s);st.innerHTML = "body{opacity:0!important;}";var h = function () {d.head.appendChild(st);},sh = function () {st.remove();};h();setTimeout(sh, 2e3);d.addEventListener("everloop:show", sh);
-        w.EFQ = w.EFQ || [];
-        w.EFQ.push({ config: { projectId: p } });
-        var j = d.createElement("script");
-        j.src = "https://cdn-prod.geteverloop.com/everloop.min.js?project_id=" + p;
-        j.async = 1;
-        d.head.appendChild(j);
-        })(window, document, "style", "YEf4fbz3phYn6vzc");
-    </script>
-    <!-- Ends Everloop SDK Loader -->
-    <style>
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out; }
-        .float { animation: float 3s ease-in-out infinite; }
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineWriter — Craft Stories that Move the World</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold gradient-bg bg-clip-text text-transparent">ABTest Pro</div>
-                <div class="hidden md:flex gap-8">
-                    <a href="#features" class="text-slate-700 hover:text-purple-600 transition font-medium">Features</a>
-                    <a href="#pricing" class="text-slate-700 hover:text-purple-600 transition font-medium">Pricing</a>
-                    <a href="#faq" class="text-slate-700 hover:text-purple-600 transition font-medium">FAQ</a>
-                </div>
-                <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition">
-                    Get Started
-                </button>
-            </div>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Hero Section -->
+  <section class="relative bg-slate-900 text-white py-24 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center opacity-30"></div>
+    <div class="relative z-10 container mx-auto max-w-5xl text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+        Craft Stories that Move <span class="text-amber-400">Hearts & Minds</span>
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+        Welcome to <strong>CineWriter</strong> — the creative hub for modern screenwriters.  
+        Write, refine, and showcase your scripts with elegance and purpose.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="#get-started" class="px-6 py-3 bg-amber-400 text-slate-900 font-semibold rounded-full hover:bg-amber-300 transition">Get Started</a>
+        <a href="#features" class="px-6 py-3 border border-slate-400 rounded-full hover:bg-slate-800 transition">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-6">
+    <div class="container mx-auto max-w-6xl text-center">
+      <h2 class="text-3xl font-bold mb-6">Everything You Need to Write Cinematic Magic</h2>
+      <p class="text-slate-500 mb-12 max-w-2xl mx-auto">
+        Whether you're crafting your first short film or a blockbuster screenplay, CineWriter provides tools that amplify your creativity and storytelling.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
+          <div class="text-amber-500 mb-4 text-3xl">🎞️</div>
+          <h3 class="font-semibold text-xl mb-3">Scene Builder</h3>
+          <p class="text-slate-500">
+            Create, rearrange, and visualize scenes seamlessly. Focus on flow, not formatting.
+          </p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 gradient-bg text-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-up">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Optimize Your Conversion Rates with Data-Driven Testing
-                    </h1>
-                    <p class="text-xl mb-8 text-purple-100">
-                        Run powerful A/B tests in minutes. Make decisions backed by real user data and grow your business faster.
-                    </p>
-                    <div class="flex gap-4">
-                        <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:shadow-2xl transition transform hover:scale-105">
-                            Start Free Trial
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition">
-                            Watch Demo
-                        </button>
-                    </div>
-                    <div class="mt-8 flex gap-8 text-sm">
-                        <div>
-                            <div class="text-3xl font-bold">10,000+</div>
-                            <div class="text-purple-200">Active Tests</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold">98%</div>
-                            <div class="text-purple-200">Satisfaction</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold">5M+</div>
-                            <div class="text-purple-200">Data Points</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="float hidden md:block">
-                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                        <div class="bg-white rounded-xl p-6 shadow-2xl">
-                            <div class="flex justify-between items-center mb-4">
-                                <div class="text-slate-800 font-bold">Test Performance</div>
-                                <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">+24% LIFT</div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span class="text-slate-600">Variant A</span>
-                                        <span class="text-slate-800 font-bold">12.4%</span>
-                                    </div>
-                                    <div class="h-3 bg-slate-200 rounded-full overflow-hidden">
-                                        <div class="h-full bg-blue-500 rounded-full" style="width: 62%"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-sm mb-2">
-                                        <span class="text-slate-600">Variant B</span>
-                                        <span class="text-slate-800 font-bold">15.4%</span>
-                                    </div>
-                                    <div class="h-3 bg-slate-200 rounded-full overflow-hidden">
-                                        <div class="h-full bg-purple-500 rounded-full" style="width: 77%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
+          <div class="text-amber-500 mb-4 text-3xl">🪶</div>
+          <h3 class="font-semibold text-xl mb-3">Dialogue Assistant</h3>
+          <p class="text-slate-500">
+            Bring your characters to life with AI-assisted tone, pacing, and emotional balance.
+          </p>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-slate-50">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Powerful Features for Better Results</h2>
-                <p class="text-xl text-slate-600">Everything you need to run successful experiments</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Lightning Fast Setup</h3>
-                    <p class="text-slate-600">Create and launch A/B tests in minutes with our intuitive interface. No coding required.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Real-Time Analytics</h3>
-                    <p class="text-slate-600">Monitor your tests in real-time with detailed metrics and statistical significance indicators.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Enterprise Security</h3>
-                    <p class="text-slate-600">Bank-level encryption and security. Your data is safe and compliant with all regulations.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Smart Targeting</h3>
-                    <p class="text-slate-600">Target specific user segments with advanced audience selection and behavioral triggers.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Visual Editor</h3>
-                    <p class="text-slate-600">Make changes to your website visually without touching code. See results instantly.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Integrations</h3>
-                    <p class="text-slate-600">Connect with your favorite tools. Works seamlessly with Google Analytics, Shopify, and more.</p>
-                </div>
-            </div>
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
+          <div class="text-amber-500 mb-4 text-3xl">📜</div>
+          <h3 class="font-semibold text-xl mb-3">Pitch Deck Generator</h3>
+          <p class="text-slate-500">
+            Turn your screenplay into a stunning pitch-ready presentation with one click.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Get Ready to Start Section -->
-    <section id="pricing" class="py-20 px-4 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Get Ready to Start Testing</h2>
-                <p class="text-xl text-slate-600">Choose the perfect plan for your business</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Starter Plan -->
-                <div class="bg-white border-2 border-slate-200 rounded-2xl p-8 hover:shadow-2xl transition">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Starter</h3>
-                    <p class="text-slate-600 mb-6">Perfect for small businesses</p>
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-slate-800">$29</span>
-                        <span class="text-slate-600">/month</span>
-                    </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Up to 5 active tests</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">50,000 visitors/month</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Basic analytics</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Email support</span>
-                        </li>
-                    </ul>
-                    <button class="w-full border-2 border-purple-600 text-purple-600 py-3 rounded-full font-bold hover:bg-purple-600 hover:text-white transition">
-                        Get Started
-                    </button>
-                </div>
+  <!-- Get Ready to Start -->
+  <section id="get-started" class="py-20 bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-extrabold mb-4">Ready to Write Your Next Masterpiece?</h2>
+      <p class="text-lg mb-8">
+        Join thousands of screenwriters shaping the future of cinema with CineWriter.
+      </p>
+      <a href="#" class="px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition">
+        Start Writing Now
+      </a>
+    </div>
+  </section>
 
-                <!-- Pro Plan (Popular) -->
-                <div class="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-8 transform scale-105 shadow-2xl relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-slate-800 px-4 py-1 rounded-full text-sm font-bold">
-                        MOST POPULAR
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
-                    <p class="text-purple-100 mb-6">For growing companies</p>
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-white">$99</span>
-                        <span class="text-purple-100">/month</span>
-                    </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-white">Unlimited tests</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-white">500,000 visitors/month</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-white">Advanced analytics</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-white">Priority support</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-white">API access</span>
-                        </li>
-                    </ul>
-                    <button class="w-full bg-white text-purple-600 py-3 rounded-full font-bold hover:shadow-2xl transition transform hover:scale-105">
-                        Get Started
-                    </button>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="bg-white border-2 border-slate-200 rounded-2xl p-8 hover:shadow-2xl transition">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Enterprise</h3>
-                    <p class="text-slate-600 mb-6">For large organizations</p>
-                    <div class="mb-6">
-                        <span class="text-5xl font-bold text-slate-800">Custom</span>
-                    </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Everything in Pro</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Unlimited visitors</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Dedicated account manager</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">Custom integrations</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-slate-600">SLA guarantee</span>
-                        </li>
-                    </ul>
-                    <button class="w-full border-2 border-purple-600 text-purple-600 py-3 rounded-full font-bold hover:bg-purple-600 hover:text-white transition">
-                        Contact Sales
-                    </button>
-                </div>
-            </div>
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6 bg-slate-100">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
+            <span class="text-lg font-semibold text-slate-800">Is CineWriter suitable for beginners?</span>
+            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-8 pb-6">
+            <p class="text-slate-600">
+              Absolutely! CineWriter is built for all experience levels. From first-time writers to seasoned professionals, our guided tools and templates help you create your best work.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4 bg-slate-50">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Frequently Asked Questions</h2>
-                <p class="text-xl text-slate-600">Everything you need to know about A/B testing</p>
-            </div>
-            
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="text-lg font-semibold text-slate-800">What is A/B testing?</span>
-                        <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-content hidden px-8 pb-6">
-                        <p class="text-slate-600">A/B testing is a method of comparing two versions of a webpage, email, or other marketing asset to determine which one performs better. You split your traffic between the two versions and measure which one achieves your goal more effectively.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="text-lg font-semibold text-slate-800">How long should I run an A/B test?</span>
-                        <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-content hidden px-8 pb-6">
-                        <p class="text-slate-600">The duration depends on your traffic volume and the size of the effect you're testing. Generally, you should run tests for at least one full business cycle (typically 1-2 weeks) and until you reach statistical significance. Our platform automatically calculates when your test has enough data.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="text-lg font-semibold text-slate-800">Do I need coding skills to use ABTest Pro?</span>
-                        <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-content hidden px-8 pb-6">
-                        <p class="text-slate-600">Not at all! Our visual editor allows you to make changes to your website without writing any code. Simply point, click, and edit. However, if you prefer to use code or need advanced customization, we provide full API access for developers.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="text-lg font-semibold text-slate-800">What metrics can I track?</span>
-                        <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-content hidden px-8 pb-6">
-                        <p class="text-slate-600">
-                            You can track any key performance indicators (KPIs) that matter to your business — such as click-through rates, conversions, sign-ups, purchases, time on page, and more. Our real-time dashboard gives you detailed insight into how each variant performs.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="text-lg font-semibold text-slate-800">Can I integrate with other tools?</span>
-                        <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="faq-content hidden px-8 pb-6">
-                        <p class="text-slate-600">
-                            Absolutely! ABTest Pro integrates seamlessly with analytics and marketing platforms like Google Analytics, Mixpanel, Segment, HubSpot, and Shopify. You can also use our API for custom integrations.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
+            <span class="text-lg font-semibold text-slate-800">Can I collaborate with other writers?</span>
+            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-8 pb-6">
+            <p class="text-slate-600">
+              Yes, CineWriter includes real-time collaboration, allowing multiple writers and editors to work on the same script simultaneously.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="text-2xl font-bold text-white mb-4">ABTest Pro</div>
-                    <p class="text-slate-400 text-sm">
-                        Optimize your website and boost conversions using data-driven A/B testing insights.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition">Demo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">Data Processing Agreement</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
-                © <span id="year"></span> ABTest Pro. All rights reserved.
-            </div>
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
+            <span class="text-lg font-semibold text-slate-800">Does it support screenplay formatting standards?</span>
+            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-content hidden px-8 pb-6">
+            <p class="text-slate-600">
+              100%. CineWriter automatically formats according to industry screenplay standards — no need to worry about spacing, margins, or alignment.
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- FAQ Toggle Script -->
-    <script>
-        function toggleFaq(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector("svg");
-            content.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180");
-        }
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 py-12 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="text-2xl font-bold text-white mb-4">CineWriter</div>
+          <p class="text-slate-400 text-sm">
+            Empowering writers to bring cinematic stories to life with clarity, creativity, and collaboration.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="#features" class="hover:text-white transition">Features</a></li>
+            <li><a href="#get-started" class="hover:text-white transition">Get Started</a></li>
+            <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
+        © <span id="year"></span> CineWriter. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-        // Set dynamic year in footer
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+  <!-- Script -->
+  <script>
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector("svg");
+      content.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
