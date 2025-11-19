@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CineWriter — Craft Stories that Move the World</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Everloop SDK Loader --> 
+  <link
+      id="everloop-sdk-preload"
+      rel="preload"
+      href="https://cdn-prod.geteverloop.com/everloop.min.js?project_id=B_49gJM0sjCmhlgC"
+      as="script"
+  />
+  <script id="everloop-sdk-loader">
+      (function (w, d, s, p) {
+      var st = d.createElement(s);st.innerHTML = "body{opacity:0!important;}";var h = function () {d.head.appendChild(st);},sh = function () {st.remove();};h();setTimeout(sh, 2e3);d.addEventListener("everloop:show", sh);
+      w.EFQ = w.EFQ || [];
+      w.EFQ.push({ config: { projectId: p } });
+      var j = d.createElement("script");
+      j.src = "https://cdn-prod.geteverloop.com/everloop.min.js?project_id=" + p;
+      j.async = 1;
+      d.head.appendChild(j);
+      })(window, document, "style", "B_49gJM0sjCmhlgC");
+  </script>
+  <!-- Ends Everloop SDK Loader -->
 </head>
 <body class="bg-slate-50 text-slate-800">
 
