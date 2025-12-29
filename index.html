@@ -1,196 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CineWriter — Craft Stories that Move the World</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- Everloop SDK Loader --> 
-  <link
-      id="everloop-sdk-preload"
-      rel="preload"
-      href="https://cdn-dev.geteverloop.com/everloop.min.js?project_id=jqiTgxvmSlLQb3H1"
-      as="script"
-  />
+  <meta name="description" content="Explore Marvel movies &amp; the Marvel Cinematic Universe (MCU) on the official site of Marvel Entertainment!
+">
+  <title>Honeycomb - Your AI-Powered Companion</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Everloop SDK Loader -->
+  <link id="everloop-sdk-preload" rel="preload" href="http://localhost:8088/everloop.min.js?project_id=3WrlKAdiB1pp_38-"
+    as="script" />
   <script id="everloop-sdk-loader">
-      (function (w, d, s, p) {
-      var st = d.createElement(s);st.innerHTML = "body{opacity:0!important;}";var h = function () {d.head.appendChild(st);},sh = function () {st.remove();};h();setTimeout(sh, 2e3);d.addEventListener("everloop:show", sh);
+    (function (w, d, s, p) {
+      var st = d.createElement(s); st.innerHTML = "body{opacity:0!important;}"; var h = function () { d.head.appendChild(st); }, sh = function () { st.remove(); }; h(); setTimeout(sh, 2e3); d.addEventListener("everloop:show", sh);
       w.EFQ = w.EFQ || [];
       w.EFQ.push({ config: { projectId: p } });
       var j = d.createElement("script");
-      j.src = "https://cdn-dev.geteverloop.com/everloop.min.js?project_id=" + p;
+      j.src = "http://localhost:8088/everloop.min.js?project_id=" + p;
       j.async = 1;
       d.head.appendChild(j);
-      })(window, document, "style", "jqiTgxvmSlLQb3H1");
+    })(window, document, "style", "3WrlKAdiB1pp_38-");
   </script>
   <!-- Ends Everloop SDK Loader -->
 </head>
-<body class="bg-slate-50 text-slate-800">
 
-  <!-- Hero Section -->
-  <section class="relative bg-slate-900 text-white py-24 px-6 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center opacity-30"></div>
-    <div class="relative z-10 container mx-auto max-w-5xl text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-        Craft Stories that Move <span class="text-amber-400">Hearts & Minds</span>
+<body id="body" class="bg-yellow-50 text-gray-900">
+  <header id="header" class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <a href="/project/">
+      <h1 id="header-title" class="text-2xl font-bold text-yellow-600">
+        Honeycomb
       </h1>
-      <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-        Welcome to <strong>CineWriter</strong> — the creative hub for modern screenwriters.  
-        Write, refine, and showcase your scripts with elegance and purpose.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a href="#get-started" class="px-6 py-3 bg-amber-400 text-slate-900 font-semibold rounded-full hover:bg-amber-300 transition">Get Started</a>
-        <a href="#features" class="px-6 py-3 border border-slate-400 rounded-full hover:bg-slate-800 transition">Learn More</a>
+    </a>
+    <button id="header-button" class="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600">
+      Get Early Access
+    </button>
+  </header>
+
+  <main id="main" class="text-center py-16 px-6">
+    <h2 id="main-title" class="text-4xl font-extrabold text-gray-800 mb-4">
+      <span id="main-title-text"></span>
+      <span id="main-title-size" class="ml-2 text-base text-gray-500"></span>
+    </h2>
+    <p id="main-description" class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Honeycomb is your AI-powered companion, designed to understand what you
+      love and help you take action. As you share your favorite products,
+      places, ideas, and content, Honeycomb learns your tastes and interests.
+    </p>
+    <button id="main-button"
+      class="mt-6 bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md text-lg font-semibold hover:bg-yellow-600">
+      Get Early Access
+    </button>
+  </main>
+
+  <section id="section-00" class="py-16 px-6 bg-white" style="display: none;"></section>
+
+  <section id="section-1" class="py-16 px-6 bg-white">
+    <div id="section-1-content" class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div id="section-1-text">
+        <h3 id="section-1-title" class="text-3xl font-bold text-gray-800 mb-3">
+          Turn inspiration into action
+        </h3>
+        <p id="section-1-description" class="text-gray-600">
+          Whether you're planning a trip, curating a wishlist, or making a big
+          purchase, Honeycomb makes it effortless to collect, connect, and
+          bring your ideas to life.
+        </p>
+        <button id="section-1-button"
+          class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
+          onclick="tracker.trackEvent('learn_more-clicked', {feature: 'inspiration', section: 'section-1'})">
+          Learn More
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="py-20 px-6">
-    <div class="container mx-auto max-w-6xl text-center">
-      <h2 class="text-3xl font-bold mb-6">Everything You Need to Write Cinematic Magic</h2>
-      <p class="text-slate-500 mb-12 max-w-2xl mx-auto">
-        Whether you're crafting your first short film or a blockbuster screenplay, CineWriter provides tools that amplify your creativity and storytelling.
-      </p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
-          <div class="text-amber-500 mb-4 text-3xl">🎞️</div>
-          <h3 class="font-semibold text-xl mb-3">Scene Builder</h3>
-          <p class="text-slate-500">
-            Create, rearrange, and visualize scenes seamlessly. Focus on flow, not formatting.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
-          <div class="text-amber-500 mb-4 text-3xl">🪶</div>
-          <h3 class="font-semibold text-xl mb-3">Dialogue Assistant</h3>
-          <p class="text-slate-500">
-            Bring your characters to life with AI-assisted tone, pacing, and emotional balance.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-lg transition">
-          <div class="text-amber-500 mb-4 text-3xl">📜</div>
-          <h3 class="font-semibold text-xl mb-3">Pitch Deck Generator</h3>
-          <p class="text-slate-500">
-            Turn your screenplay into a stunning pitch-ready presentation with one click.
-          </p>
-        </div>
+  <section id="section-2" class="py-16 px-6 bg-yellow-100">
+    <div id="section-2-content" class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div id="section-2-text">
+        <h3 id="section-2-title" class="text-3xl font-bold text-gray-800 mb-3">
+          Discover more with friends
+        </h3>
+        <p id="section-2-description" class="text-gray-600">
+          Honeycomb is even better with friends. See what your friends are
+          discovering, collaborate on shared collections, and stay inspired by
+          the trends shaping your circle.
+        </p>
+        <button id="section-2-button"
+          class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600"
+          onclick="tracker.trackEvent('connect_friends-clicked', {feature: 'social', section: 'section-2'})">
+          Connect Friends
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Get Ready to Start -->
-  <section id="get-started" class="py-20 bg-gradient-to-r from-amber-500 to-amber-400 text-slate-900">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="text-4xl font-extrabold mb-4">Ready to Write Your Next Masterpiece?</h2>
-      <p class="text-lg mb-8">
-        Join thousands of screenwriters shaping the future of cinema with CineWriter.
-      </p>
-      <a href="#" class="px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition">
-        Start Writing Now
-      </a>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-20 px-6 bg-slate-100">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-      <div class="space-y-4">
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-            <span class="text-lg font-semibold text-slate-800">Is CineWriter suitable for beginners?</span>
-            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-6">
-            <p class="text-slate-600">
-              Absolutely! CineWriter is built for all experience levels. From first-time writers to seasoned professionals, our guided tools and templates help you create your best work.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-            <span class="text-lg font-semibold text-slate-800">Can I collaborate with other writers?</span>
-            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-6">
-            <p class="text-slate-600">
-              Yes, CineWriter includes real-time collaboration, allowing multiple writers and editors to work on the same script simultaneously.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full text-left px-8 py-6 flex justify-between items-center hover:bg-slate-50 transition">
-            <span class="text-lg font-semibold text-slate-800">Does it support screenplay formatting standards?</span>
-            <svg class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-6">
-            <p class="text-slate-600">
-              100%. CineWriter automatically formats according to industry screenplay standards — no need to worry about spacing, margins, or alignment.
-            </p>
-          </div>
-        </div>
+  <section id="browser-section" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <!-- Chrome Only (Static - visible for all browsers) -->
+      <div class="browser-content chrome-only">
+        <h3 class="text-3xl font-bold text-gray-800 mb-3">test purpose</h3>
+        <h3 class="text-3xl font-bold text-gray-800 mb-3">Chrome Browser</h3>
+        <p class="text-gray-600 mb-4">This content is only visible in Chrome</p>
+        <p class="text-gray-600">Additional Chrome-specific content here</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-300 py-12 px-4">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <div>
-          <div class="text-2xl font-bold text-white mb-4">CineWriter</div>
-          <p class="text-slate-400 text-sm">
-            Empowering writers to bring cinematic stories to life with clarity, creativity, and collaboration.
-          </p>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-4">Explore</h4>
-          <ul class="space-y-2">
-            <li><a href="#features" class="hover:text-white transition">Features</a></li>
-            <li><a href="#get-started" class="hover:text-white transition">Get Started</a></li>
-            <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-4">Connect</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
-            <li><a href="#" class="hover:text-white transition">Instagram</a></li>
-            <li><a href="#" class="hover:text-white transition">Twitter</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-slate-700 pt-6 text-center text-sm text-slate-500">
-        © <span id="year"></span> CineWriter. All rights reserved.
-      </div>
-    </div>
+  <footer id="footer" class="bg-gray-900 text-white text-center py-6">
+    <p id="footer-text" class="mb-4">Join the Honeycomb community early!</p>
+    <button id="footer-button"
+      class="bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md text-lg font-semibold hover:bg-yellow-600">
+      Get Early Access
+    </button>
+    <p id="footer-copyright" class="mt-6 text-gray-400 text-sm">
+      &copy; 2025 Honeycomb. All rights reserved.
+    </p>
   </footer>
 
-  <!-- Script -->
   <script>
-    function toggleFaq(button) {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector("svg");
-      content.classList.toggle("hidden");
-      icon.classList.toggle("rotate-180");
+    function updateMainTitle() {
+      const width = window.innerWidth;
+      const titleText = document.getElementById('main-title-text');
+      if (!titleText) return;
+      let range = '';
+      if (width < 480) {
+        range = '<480';
+      } else if (width < 720) {
+        range = '480 - 720';
+      } else if (width < 1000) {
+        range = '720 - 1000';
+      } else {
+        range = '>1000';
+      }
+      titleText.textContent = `Width: ${width}px (${range})`;
+      titleText.style.color = range === '<480' ? 'red' : (range === '>1000' ? 'green' : 'orange');
+      console.log("text updated")
     }
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    window.addEventListener('resize', updateMainTitle);
+    window.addEventListener('DOMContentLoaded', updateMainTitle);
 
+    // Browser Detection
+    function detectBrowser() {
+      const userAgent = navigator.userAgent;
+      const isFirefox = /Firefox/.test(userAgent);
+      const isChrome = /Chrome/.test(userAgent) && !/Chromium/.test(userAgent);
+
+      const section00 = document.querySelector('#section-00');
+      section00.style.display = 'block';
+
+      if (isChrome) {
+        // Chrome: Render card WITH card-container wrapper
+        section00.innerHTML = `
+          <div class="card-wrapper p-6 bg-gray-100">
+            <div class="card-container max-w-md mx-auto">
+              <div class="card-border border border-gray-300 rounded-xl">
+                <div class="card p-6 bg-white rounded-lg space-y-4">
+
+                  <p class="card-label text-sm text-gray-500">
+                    Label text
+                  </p>
+
+                  <h1 class="card-title text-xl font-semibold text-gray-900">
+                    Card Title
+                  </h1>
+
+                  <div class="card-description-wrapper">
+                    <p class="card-description text-gray-600 text-sm">
+                      Description text
+                    </p>
+                  </div>
+
+                  <div class="card-footer border-t border-gray-200 pt-4 space-y-2">
+                    <p class="footer-label text-xs text-gray-500">
+                      Footer label
+                    </p>
+
+                    <div class="footer-value-wrapper">
+                      <h1 class="footer-value text-lg font-bold text-gray-900">
+                        Value
+                      </h1>
+                    </div>
+
+                    <div class="footer-info-wrapper">
+                      <p class="footer-info text-xs text-gray-600">
+                        Additional info
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (isFirefox) {
+        // Firefox: Render card WITHOUT card-container wrapper
+        section00.innerHTML = `
+          <div class="card-wrapper p-6 bg-gray-100">
+            <div class="card-border border border-gray-300 rounded-xl">
+              <div class="card p-6 bg-white rounded-lg space-y-4">
+                <p class="card-label text-sm text-gray-500">
+                  Label text
+                </p>
+                <h1 class="card-title text-xl font-semibold text-gray-900">
+                  Card Title
+                </h1>
+                <div class="card-description-wrapper">
+                  <p class="card-description text-gray-600 text-sm">
+                    Description text
+                  </p>
+                </div>
+                <div class="card-footer border-t border-gray-200 pt-4 space-y-2">
+                  <p class="footer-label text-xs text-gray-500">
+                    Footer label
+                  </p>
+                  <div class="footer-value-wrapper">
+                    <h1 class="footer-value text-lg font-bold text-gray-900">
+                      Value
+                    </h1>
+                  </div>
+                  <div class="footer-info-wrapper">
+                    <p class="footer-info text-xs text-gray-600">
+                      Additional info
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Render Firefox browser content
+        const browserSection = document.querySelector('#browser-section .max-w-4xl');
+        const firefoxDiv = document.createElement('div');
+        firefoxDiv.className = 'browser-content firefox-only';
+        firefoxDiv.innerHTML = `
+      <h3 class="text-3xl font-bold text-gray-800 mb-3">Firefox Browser</h3>
+      <p class="text-gray-600 mb-4">This content is only visible in Firefox</p>
+    `;
+        browserSection.insertBefore(firefoxDiv, browserSection.firstChild);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', detectBrowser);
+  </script>
 </body>
+
 </html>
