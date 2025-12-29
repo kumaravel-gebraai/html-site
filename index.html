@@ -8,19 +8,23 @@
 ">
   <title>Honeycomb - Your AI-Powered Companion</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- Everloop SDK Loader -->
-  <link id="everloop-sdk-preload" rel="preload" href="http://localhost:8088/everloop.min.js?project_id=3WrlKAdiB1pp_38-"
-    as="script" />
+  <!-- Everloop SDK Loader --> 
+  <link
+      id="everloop-sdk-preload"
+      rel="preload"
+      href="https://cdn-dev.geteverloop.com/everloop.min.js?project_id=fjvWI2sfPtpf8iKo"
+      as="script"
+  />
   <script id="everloop-sdk-loader">
-    (function (w, d, s, p) {
-      var st = d.createElement(s); st.innerHTML = "body{opacity:0!important;}"; var h = function () { d.head.appendChild(st); }, sh = function () { st.remove(); }; h(); setTimeout(sh, 2e3); d.addEventListener("everloop:show", sh);
+      (function (w, d, s, p) {
+      var st = d.createElement(s);st.innerHTML = "body{opacity:0!important;}";var h = function () {d.head.appendChild(st);},sh = function () {st.remove();};h();setTimeout(sh, 2e3);d.addEventListener("everloop:show", sh);
       w.EFQ = w.EFQ || [];
       w.EFQ.push({ config: { projectId: p } });
       var j = d.createElement("script");
-      j.src = "http://localhost:8088/everloop.min.js?project_id=" + p;
+      j.src = "https://cdn-dev.geteverloop.com/everloop.min.js?project_id=" + p;
       j.async = 1;
       d.head.appendChild(j);
-    })(window, document, "style", "3WrlKAdiB1pp_38-");
+      })(window, document, "style", "fjvWI2sfPtpf8iKo");
   </script>
   <!-- Ends Everloop SDK Loader -->
 </head>
